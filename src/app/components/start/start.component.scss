@@ -1,0 +1,38 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    p {
+        width: 50%;
+        font-size: 150%;
+    }
+    ul {
+        width: 60%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        li {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .movieTitle{
+                width: 100%;
+                height: 20px;
+            }
+            .moviePoster{
+                width: 100%;
+            }
+            .movieDescription {
+                width: 100%;
+                font-size: 90%;
+
+            }
+        }
+    }
+}    
+

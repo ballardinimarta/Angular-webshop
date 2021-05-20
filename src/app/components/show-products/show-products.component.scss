@@ -1,0 +1,18 @@
+#productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    app-product {
+        height: 500px;
+        width: 15%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s;
+    }
+    
+}

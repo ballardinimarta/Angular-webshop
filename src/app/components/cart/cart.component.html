@@ -1,0 +1,14 @@
+<div>
+    <h1>Varukorg</h1>
+    <p *ngIf='cart.length == 0'>Oops här fanns inga produkter :( </p>
+    <div id="cartContainer" *ngIf='cart.length > 0'>
+        <div *ngFor='let item of cart'>
+            <img class = 'cartItemImage' [src] = 'item.imageUrl'>
+            <h3>{{item.name}}</h3>
+            <button (click)='removeCartItem(item)' >&#10005;</button>
+        </div>
+    </div>
+    <button *ngIf='cart.length > 0' id="orderbtn" >Lägg Beställning</button>
+    <button *ngIf='cart.length > 0' id="clearbtn" (click)="clearCart()">Rensa Varukorgen</button>
+</div>
+

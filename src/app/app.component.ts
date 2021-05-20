@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route } from './models/Route';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'webshop';
+  routes: Route[] = [
+    new Route('/', 'Hem'),
+    new Route('/products', 'Produkter'),
+    new Route('/cart', 'Varukorg'),
+  ]
 }
