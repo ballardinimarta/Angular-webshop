@@ -4,9 +4,13 @@
     <div id="cartContainer" *ngIf='cart.length > 0'>
         <div *ngFor='let item of cart'>
             <img class = 'cartItemImage' [src] = 'item.imageUrl'>
-            <h3>{{item.name}}</h3>
+            <h3 class = 'cartItemName'>{{item.name}}</h3>
+            <em class = 'cartItemPrice'>{{item.price}} kr</em>
             <button (click)='removeCartItem(item)' >&#10005;</button>
         </div>
+    </div>
+    <div id="totalprice" *ngIf='totalPrice != 0'>
+        <b>Totalpriset: <em>{{totalPrice}}</em></b>
     </div>
     <button *ngIf='cart.length > 0' id="orderbtn" >Lägg Beställning</button>
     <button *ngIf='cart.length > 0' id="clearbtn" (click)="clearCart()">Rensa Varukorgen</button>
