@@ -1,3 +1,7 @@
-<div id="productContainer" >
-    <app-product *ngFor='let p of products' [product]='p'></app-product>
+<div id="categorycontainer">
+    <button class="categorybtn" (click)="getAllProducts()" >All</button>
+    <button class="categorybtn" *ngFor='let category of categorys' (click)="getProductByCategory(category)" >{{category.name}}</button>
+</div>
+<div id="productContainer">
+    <app-product *ngFor='let p of products' [product]='p' ></app-product>
 </div>

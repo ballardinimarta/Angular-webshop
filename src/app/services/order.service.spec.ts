@@ -1,22 +1,20 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { ProductService } from './product.service';
+import { OrderService } from './order.service';
 
-describe('ProductService', () => {
-  let service: ProductService;
+describe('OrderService', () => {
+  let service: OrderService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule]
+
     });
-    service = TestBed.inject(ProductService);
+    service = TestBed.inject(OrderService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  it('should recieve data', () => {
-    expect(service.products$.subscribe).toBeTruthy();
-  })
 });

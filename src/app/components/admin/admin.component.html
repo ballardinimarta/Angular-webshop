@@ -1,0 +1,22 @@
+<div id="admincontainer">
+    <div class="orderwrap" *ngFor="let order of orders">
+        <div class="orderinfowrap">
+            <b>OrderId: {{order.id}} </b>
+            <span>Kund: <em>{{order.createdBy}}</em> </span>
+            <button (click)='deleteOrder(order.id)'><i class="far fa-trash-alt"></i></button>
+        </div>
+        
+        <table>
+            <tr>
+                <th>produkt-id</th>
+                <th>antal</th>
+            </tr>
+            <tr *ngFor="let row of order.orderRows">
+                <td>{{row.productId}}</td>
+                <td>{{row.amount}}</td>
+            </tr>
+        </table>
+      
+    </div>
+</div>
+

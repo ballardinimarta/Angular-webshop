@@ -1,0 +1,37 @@
+#admincontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .orderwrap {
+        border: 2px solid #a13648;
+        padding: 10px;
+        margin: 10px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        .orderinfowrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 120%;
+                cursor: pointer;
+                color: #a13648;
+            }
+        }
+        table {
+            td, th {
+                border: 1px solid #f5d4d4;
+                text-align: left;
+                padding: 8px;
+                background-color: #fffefe;
+              }
+        }
+    }
+
+}

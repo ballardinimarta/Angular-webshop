@@ -1,4 +1,4 @@
-    <img class="productImage" [src]="product.imageUrl">
-    <p class="productTitle">{{product.name}}, {{product.year}}</p>
+    <img class="productImage" [src]="product.imageUrl" [routerLink]="['/product', product.id]" >
+    <h3 class="productTitle">{{product.name}}, {{product.year}}</h3>
     <p class="productPrice">{{product.price}} kr</p>
     <button (click)="addToMyCart()" >KÖP</button>

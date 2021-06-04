@@ -1,0 +1,6 @@
+<div id="searchcontainer">
+    <input type="text" placeholder="Sök film!" name="search" #searchTerm (keyup)="search(searchTerm.value)" />
+</div>
+<div id="productContainer" >
+    <app-product *ngFor='let p of searchResult | async' [product]='p' ></app-product>
+</div>

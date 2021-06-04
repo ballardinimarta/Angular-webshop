@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Cart } from '../models/Cart';
 import { Product } from '../models/Product';
 
 @Injectable({
@@ -10,8 +11,13 @@ export class CartService {
   constructor() { }
 
   addToCart(product) {
-    this.cart.push(product);
-    console.log(product);
+        if (this.cart.includes(product)) {
+          product.amount += 1;  
+        } else {
+          product.amount = 1;
+          this.cart.push(product);
+          console.log(this.cart)
+        }
   }
   getCartItems() {
     return this.cart;

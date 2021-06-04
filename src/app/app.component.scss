@@ -32,17 +32,7 @@
     }
 }
 
-footer {
-    background-color: rgb(172, 168, 167);
-    color: white;
-    margin: 0;
-    padding: 20px 0px;
-    ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
+#bottommargin {
+    height: 100px;
 }
 

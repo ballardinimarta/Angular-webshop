@@ -15,13 +15,14 @@ button {
     background-color: #fd798f;
     font-family: inherit;
     font-weight: 600;
-    transition: .5s;
+    transition: .1s;
     border-radius: 5px;
-    box-shadow: inset  -5px -5px 2px #cf5065;            
+    box-shadow:   0px 8px 2px #cf5065;            
+  
 }
-button:hover {
-    box-shadow: inset -2px -2px 2px #cf5065;
-    
+button:active {
+    transform: translateY(5px);
+    box-shadow:   0px 3px 2px #a13648;            
 }
     
 

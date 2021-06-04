@@ -1,8 +1,8 @@
 <div>
     <p>Välkommen till FilmButiken.se, Här säljer vi filmer för låga och resonabla priser. Vi har ett stort utbud på gamla och nya filmer, och en leveranstid på 1-3 dagar. Kolla gärna in våra <a routerLink="/products">produkter</a> och hitta vad du behöver för den perfekta filmkvällen!</p>
-    <h2>Veckans populäraste filmer!</h2>
+    <h2>Några av våra filmtips!</h2>
     <ul>
-        <li *ngFor='let m of selectedMovies'>
+        <li *ngFor='let m of selectedMovies' [routerLink]="['product', m.id]">
             <h4 class="movieTitle">{{m.name }}</h4>
             <img class="moviePoster" [src]="m.imageUrl">
             <p class="movieDescription">{{m.description}}</p>

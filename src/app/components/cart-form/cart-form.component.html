@@ -1,0 +1,10 @@
+<form [formGroup]='buyer' (ngSubmit)='submitForm()'>
+    <input type="email" placeholder="Email" formControlName="email"/>
+    <input type="text" placeholder="Förnamn" formControlName="firstname"/>
+	<input type="text" placeholder="Efternamn" formControlName="lastname"/>
+    <label for="payment">Betalningsmetod: </label>
+    <select name="payment" formControlName="payment" >
+       <option *ngFor="let p of paymentMethods" [value]="p">{{p}}</option>
+    </select>
+    <button [disabled]='buyer.invalid' type="submit">Skicka!</button>
+</form>

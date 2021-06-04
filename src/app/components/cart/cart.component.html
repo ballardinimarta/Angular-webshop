@@ -6,13 +6,17 @@
             <img class = 'cartItemImage' [src] = 'item.imageUrl'>
             <h3 class = 'cartItemName'>{{item.name}}</h3>
             <em class = 'cartItemPrice'>{{item.price}} kr</em>
+            <input type="number" name="" id="" [value]="item.amount" (change)="changeAmount(item, $event.target.value)">
             <button (click)='removeCartItem(item)' >&#10005;</button>
         </div>
     </div>
     <div id="totalprice" *ngIf='totalPrice != 0'>
-        <b>Totalpriset: <em>{{totalPrice}}</em></b>
+        <b>Totalpriset: <em>{{totalPrice}}</em> kr</b>
     </div>
-    <button *ngIf='cart.length > 0' id="orderbtn" >Lägg Beställning</button>
-    <button *ngIf='cart.length > 0' id="clearbtn" (click)="clearCart()">Rensa Varukorgen</button>
+    <button *ngIf='cart.length > 0' id="orderbtn" (click)="showAdressForm()">Vidare till beställning</button>
+
+    <div *ngIf="show">
+       <app-cart-form [price]='totalPrice' [cart]='cart'></app-cart-form>
+    </div>
 </div>
 

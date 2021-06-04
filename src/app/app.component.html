@@ -1,17 +1,10 @@
 <div id="header">
-    <h1>FilmButiken.se</h1>
+    <h1>FilmButiken.se <i class="fas fa-video"></i></h1>
     <nav>
         <ul>
-            <li *ngFor='let r of routes'><a [routerLink]="r.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{r.name}}</a></li>
+            <li *ngFor='let r of routes'><a [routerLink]="r.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i [class]="r.name"> </i></a></li>
         </ul>
     </nav>
 </div>
-
 <router-outlet></router-outlet>
-
-<!-- <footer>
-    <ul>
-        <li>kundservice@filmbutiken.se</li>
-        <li>Kungsgatan 22, 111 11 Stockholm</li>
-    </ul>
-</footer> -->
+<div id="bottommargin"></div>

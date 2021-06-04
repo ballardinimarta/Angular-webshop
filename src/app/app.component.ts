@@ -8,8 +8,9 @@ import { Route } from './models/Route';
 })
 export class AppComponent {
   routes: Route[] = [
-    new Route('/', 'Hem'),
-    new Route('/products', 'Produkter'),
-    new Route('/cart', 'Varukorg'),
+    new Route('/', 'fas fa-home'),
+    new Route('/products', 'fas fa-film'),
+    new Route('/cart', 'fas fa-shopping-cart'),
+    new Route('/search', 'fas fa-search'),
   ]
 }

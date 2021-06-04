@@ -1,1 +1,11 @@
-<p>product-detail works!</p>
+<div class="productDetailContainer">
+    <div class="imageWrap">
+        <img [src]="product.imageUrl" alt="">
+    </div>
+    <div class="infoWrap">
+        <h1>{{product.name }}</h1>
+        <em>{{product.year}}</em>
+        <p>{{product.description}}</p>
+        <button (click)="addToMyCart()" >KÖP</button>
+    </div>
+</div>

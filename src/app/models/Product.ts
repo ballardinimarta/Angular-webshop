@@ -9,4 +9,5 @@ export class Product {
     price:number;
     productCategory: Category[];
     year:number;
+    amount:number = 0;
 }
