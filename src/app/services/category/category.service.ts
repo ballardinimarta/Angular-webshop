@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Category } from '../models/Category';
-import { ProductCategory } from '../models/ProductCategory';
+import { Category } from '../../models/Category';
+import { ProductCategory } from '../../models/ProductCategory';
 
 @Injectable({
   providedIn: 'root'

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Order } from 'src/app/models/Order';
 import { Orderrow } from 'src/app/models/OrderRow';
 import { Product } from 'src/app/models/Product';
-import { OrderService } from 'src/app/services/order.service';
+import { OrderService } from 'src/app/services/order/order.service';
 
 @Component({
   selector: 'app-cart-form',
