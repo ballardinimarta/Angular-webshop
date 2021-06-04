@@ -12,5 +12,6 @@ export class AppComponent {
     new Route('/products', 'fas fa-film'),
     new Route('/cart', 'fas fa-shopping-cart'),
     new Route('/search', 'fas fa-search'),
+    new Route('/admin', 'fas fa-user-cog')
   ]
 }
